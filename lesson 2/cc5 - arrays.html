@@ -9,7 +9,7 @@
 <body>
 
     <script>
-        var names = ["Nikolai", "Simon", "Marco", "Helder", "New Guy"];
+        var names = ["Nikolai", "Simon", "Marco", "Helder"];
 
         //        document.write(names[0] + "<br>");
         //        document.write(names[1] + "<br>");
@@ -17,7 +17,11 @@
         //        document.write(names[3] + "<br>");
 
         for (var i = 0; i < names.length; i++) {
-            document.write(names[i] + "<br>");
+            if (i % 2 == 0) { // EVEN NUMBER
+                document.write(i + ": " + names[i] + " 😀<br>");    
+            } else { // ODD NUMBER
+                document.write(i + ": " + names[i] + " !!!!! <br>");
+            }
         }
     </script>
 

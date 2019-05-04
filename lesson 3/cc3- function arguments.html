@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        
+        function areaSquare(side) {
+//            
+//            // var area = side * side;
+//            var area = Math.pow(side, 2);
+//            
+//            document.write(area + "<br>");
+            areaRect(side, side);
+        }
+        
+        function perimeterSquare(side) {
+//            var per = side * 4;
+//            
+//            document.write(per + "<br>");
+            perimeterRect(side, side);
+        }
+        
+        function areaRect(side1, side2) {
+            var area = side1 * side2;
+            
+            document.write(area + "<br>");
+        }
+        
+        function perimeterRect(side1, side2) {
+            var per = (side1 + side2) * 2;
+            
+            document.write(per + "<br>");
+        }
+        
+        areaSquare(4);
+        areaSquare(2);
+        areaSquare(5);
+        
+        areaRect(2, 4);
+        perimeterRect(5, 5);
+            
+    </script>
+
+</body></html>

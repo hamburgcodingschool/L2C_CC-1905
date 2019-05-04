@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        var ages = [34, 33, 35, 38];
+
+        var total = 0;
+        var highest = ages[0];
+        var lowest = ages[0];
+        
+        for (var i = 0; i < ages.length; i++) {
+            document.write(ages[i] + "<br>");
+            
+            total += ages[i]; //total = total + ages[i];
+            
+            if (ages[i] > highest) {
+                highest = ages[i];
+            }
+            
+            if (ages[i] < lowest) {
+                lowest = ages[i];
+            }
+            
+        }
+        document.write("--------<br>");
+        document.write("Total: " + total + "<br>");
+        
+        var avg = total / ages.length;
+        document.write("Average: " + avg + "<br>");
+        
+        document.write("Highest: " + highest + "<br>");
+        document.write("Lowest: " + lowest + "<br>");
+        
+        
+    
+    </script>
+
+</body></html>

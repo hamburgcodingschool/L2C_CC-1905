@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        // Area: πr²
+        function areaCircle(radius) {            
+            // var area = Math.PI * radius * radius;
+            var area = Math.PI * Math.pow(radius, 2);
+
+            return area;
+        }
+        
+        // Perimeter: 2πr
+        function perimeterCircle(radius) {
+            return 2 * Math.PI * radius;
+        }
+    
+        function roundIt(value, precision) {
+            var multiplier = Math.pow(10, precision);
+            var result = Math.round(value * multiplier) / multiplier;
+            return result;
+        }
+        
+        var x = areaCircle(2);
+        document.write(x + "<br>");
+        
+        var p = perimeterCircle(4);
+        var rounded = roundIt(p, 5);
+        
+        document.write(rounded + "<br>");
+        
+        
+            
+    </script>
+
+</body></html>

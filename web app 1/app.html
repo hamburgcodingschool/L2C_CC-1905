@@ -1,0 +1,51 @@
+<!doctype html>
+<html> 
+    <head>
+    <title>My First Page</title>
+    <style>
+        /*
+                THIS IS THE ONLY WAY TO DO COMMENTS IN CSS
+            */
+        #pageTitle {
+            color: red;
+            text-align: center;
+        }
+
+        #myButton {
+            background-color: aqua;
+            border: solid 2px red;
+            box-shadow: 5px 5px 10px;
+            border-radius: 8px;
+        }
+
+        #myContentBox {
+            border: solid 1px black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+            THIS IS HOW YOU DO COMMENTS IN HTML
+        -->
+    <h1 id="pageTitle">Hi</h1>
+
+    <button id="myButton">Click here</button>
+
+    <div id="myContentBox"></div>
+
+    <script>
+        function sayHello() {
+            alert("HI! What's UP?");
+        }
+        
+        var pageTitle = document.getElementById("pageTitle");
+        pageTitle.style.color = "green";
+        
+        
+        var myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", sayHello);
+    </script>
+</body></html>
