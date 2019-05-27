@@ -1,0 +1,53 @@
+<!doctype html>
+<html> 
+    <head>
+    <title>My First Page</title>
+    <style>
+        #myImage {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btnPrev">PREVIOUS</button>
+    <img id="myImage" src="images/bb.jpg">
+    <button id="btnNext">NEXT</button>
+    
+    <script>
+        var images = [
+            "images/bb.jpg",
+            "images/pe.jpg",
+            "images/got.jpg"
+        ]
+        
+        var btnPrev = document.getElementById("btnPrev");
+        var btnNext = document.getElementById("btnNext");
+        var myImage = document.getElementById("myImage");
+        
+        var counter = 0;
+        
+        btnPrev.addEventListener("click", function() {
+            counter--;
+            
+            if (counter < 0) {
+                counter = images.length - 1;
+            }
+            myImage.src = images[counter];
+        });
+        
+        
+        btnNext.addEventListener("click", function() {
+            counter++;
+            
+            if (counter >= images.length) {
+                counter = 0;
+            }
+            myImage.src = images[counter];
+        });
+        
+        
+        
+    </script>
+    
+</body></html>

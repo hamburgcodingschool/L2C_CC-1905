@@ -1,0 +1,60 @@
+<!doctype html>
+<html> 
+    <head>
+    <title>My First Page</title>
+    <style>
+        /*
+                THIS IS THE ONLY WAY TO DO COMMENTS IN CSS
+            */
+        #pageTitle {
+            color: red;
+            text-align: center;
+        }
+
+        #myButton {
+            background-color: aqua;
+            border: solid 2px red;
+            box-shadow: 5px 5px 10px;
+            border-radius: 8px;
+        }
+
+        #myContentBox {
+            border: solid 1px black;
+            width: 100px;
+            height: 100px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+            THIS IS HOW YOU DO COMMENTS IN HTML
+        -->
+    <h1 id="pageTitle">Hi</h1>
+
+    <button id="myButton">Click here</button>
+    
+    <input id="myCheckBox" type="checkbox">
+
+    <div id="myContentBox">0 X</div>
+
+    <script>
+        var counter = 0;
+        
+        var myContentBox = document.getElementById("myContentBox");
+        var myCheckBox = document.getElementById("myCheckBox");
+        
+        var myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", function() {
+            
+            if (myCheckBox.checked) {
+                counter++;
+            } else {
+                counter--;
+            }
+            
+            myContentBox.innerHTML = counter + " X";
+        });
+    </script>
+</body></html>
